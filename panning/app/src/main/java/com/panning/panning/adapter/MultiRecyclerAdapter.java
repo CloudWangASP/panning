@@ -23,6 +23,7 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
 
     private final int LARGE_IMG = 1;
     private final int MULTI_IMG = 2;
+    private final int VIDEO_IMG = 3;
 
     private Context mContext;
     private LayoutHelper mLayoutHelper;
@@ -41,6 +42,8 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
                 return LARGE_IMG;
             case 2:
                 return MULTI_IMG;
+            case 3:
+                return VIDEO_IMG;
         }
         return super.getItemViewType(position);
     }
@@ -60,6 +63,9 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
             case 2:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_multi_image, parent, false);
                 return new MultiImgViewHolder(view);
+            case 3:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_video_text, parent, false);
+                return new VideoTextViewHolder(view);
         }
         return null;
     }
@@ -97,6 +103,17 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
             multiImg1 = itemView.findViewById(R.id.multiImg1);
             multiImg2 = itemView.findViewById(R.id.multiImg2);
             multiImg3 = itemView.findViewById(R.id.multiImg3);
+        }
+    }
+
+    public static class VideoTextViewHolder extends RecyclerView.ViewHolder {
+        public TextView videoTitle;
+        public ImageView videoImg;
+
+        public VideoTextViewHolder(View itemView) {
+            super(itemView);
+            videoTitle = itemView.findViewById(R.id.videoTitle);
+            videoImg = itemView.findViewById(R.id.videoImg);
         }
     }
 }

@@ -8,23 +8,24 @@
                 android:paddingTop="10dp">
 
     <TextView
-        android:id="@+id/largeTitle"
+        android:id="@+id/videoTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/videoImg"
         android:textColor="@color/colorBlack"
         android:textSize="16dp"/>
 
     <ImageView
-        android:id="@+id/largeImg"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/largeTitle"/>
+        android:id="@+id/videoImg"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/largeImg"
+        android:layout_below="@+id/videoImg"
         android:layout_marginTop="15dp"
         android:background="@color/colorLightGrey"/>
 </RelativeLayout>
