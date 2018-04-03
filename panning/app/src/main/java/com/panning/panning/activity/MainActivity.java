@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.panning.panning.R;
 import com.panning.panning.adapter.CustomFragmentPagerAdapter;
 import com.panning.panning.fragment.PanningBaseFragment;
+import com.panning.panning.fragment.PanningRecyclerFragment;
 import com.panning.panning.fragment.PanningMarketFragment;
 import com.panning.panning.view.MainViewPager;
 

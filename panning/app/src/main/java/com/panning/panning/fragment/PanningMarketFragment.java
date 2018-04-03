@@ -32,7 +32,7 @@ public class PanningMarketFragment extends AppCompatDialogFragment {
 
         ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
-            fragmentArrayList.add(new PanningBaseFragment());
+            fragmentArrayList.add(new PanningRecyclerFragment());
         }
         CustomFragmentPagerAdapter customFragmentPagerAdapter = new CustomFragmentPagerAdapter(getChildFragmentManager());
         customFragmentPagerAdapter.setFragments(fragmentArrayList);

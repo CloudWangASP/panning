@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +29,15 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
     private Context mContext;
     private LayoutHelper mLayoutHelper;
     private List<MarketItem> mDataList;
+    private OnItemClickListener onItemClickListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     public MultiRecyclerAdapter(Context context, LayoutHelper layoutHelper, List<MarketItem> dataList) {
         this.mContext = context;
@@ -71,8 +81,16 @@ public class MultiRecyclerAdapter extends DelegateAdapter.Adapter<RecyclerView.V
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        View itemView = holder.itemView;
+        if (onItemClickListener != null) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onItemClickListener.onItemClick(holder.itemView, position);
+                }
+            });
+        }
     }
 
     @Override
