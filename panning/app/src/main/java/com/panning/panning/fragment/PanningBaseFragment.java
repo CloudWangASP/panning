@@ -59,10 +59,14 @@ public class PanningBaseFragment extends AppCompatDialogFragment {
                 super.onBindViewHolder(holder, position);
                 if (holder instanceof LargeImgViewHolder) {
                     LargeImgViewHolder largeImgViewHolder = (LargeImgViewHolder) holder;
-//                    largeImgViewHolder.largeImg.setText("DSFSDFSDFSD");
+                    largeImgViewHolder.largeTitle.setText("上淘金，淘出你人生的第一桶金");
+//                    Glide.with(PanningBaseFragment.this).load("http://b254.photo.store.qq.com/psb?/V10IHpOG1tqiS8/KdxmIThxqd9yvciRBhAz3y1qtBSjtamOLT.wvwbLXiE!/b/dP4AAAAAAAAA&bo=VAY4BHAIoAUFCZk!&rf=viewer_4").into(largeImgViewHolder.largeImg);
                 } else if (holder instanceof MultiImgViewHolder) {
                     MultiImgViewHolder multiImgViewHolder = (MultiImgViewHolder) holder;
-//                    multiImgViewHolder.tv.setText("fsdfsdsfsdf");
+                    multiImgViewHolder.multiTitle.setText("这么多红包，你心不心动？");
+//                    Glide.with(PanningBaseFragment.this).load("http://a.hiphotos.baidu.com/image/h%3D300/sign=ea4799136ed0f703f9b293dc38fa5148/faf2b2119313b07eaad49f0c00d7912397dd8c4d.jpg").into(multiImgViewHolder.multiImg1);
+//                    Glide.with(PanningBaseFragment.this).load("http://images.17173.com/2016/news/2016/07/22/gxy0722aa14s.jpg").into(multiImgViewHolder.multiImg2);
+//                    Glide.with(PanningBaseFragment.this).load("http://pic116.nipic.com/file/20161127/2290814_095001716000_2.jpg").into(multiImgViewHolder.multiImg3);
                 }
             }
         });

@@ -3,4 +3,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGold">#FFD700</color>
+    <color name="colorLemon">#FFFACD</color>
+    <color name="colorIvory">#FFFFF0</color>
+    <color name="colorDarkCyan">#008B8B</color>
+    <color name="colorLightSeaGreen">#20B2AA</color>
 </resources>
