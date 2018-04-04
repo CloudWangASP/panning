@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="公告："
             android:textColor="@color/colorWhite"
-            android:textSize="12dp" />
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/notice"
@@ -27,14 +27,37 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
             android:textColor="@color/colorWhite"
-            android:textSize="12dp" />
+            android:textSize="12dp"/>
     </LinearLayout>
 
-
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@mipmap/base_holder" />
+        android:background="@mipmap/base_holder">
+
+        <ImageView
+            android:id="@+id/gold1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp"
+            android:src="@mipmap/panning"/>
+
+        <ImageView
+            android:id="@+id/gold2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/panning"/>
+
+        <ImageView
+            android:id="@+id/gold3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/panning"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,6 +66,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/income"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -54,15 +78,29 @@
                 android:layout_height="wrap_content"
                 android:text="今日收益"
                 android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:textSize="18dp"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="￥100"
-                android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/todayProfit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -77,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:text="总收益"
                 android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:textSize="18dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -85,7 +123,7 @@
                 android:layout_marginTop="10dp"
                 android:text="￥100"
                 android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:textSize="20dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -100,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:text="已提现"
                 android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:textSize="18dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,9 +146,7 @@
                 android:layout_marginTop="10dp"
                 android:text="￥100"
                 android:textColor="@color/colorBlack"
-                android:textSize="16dp" />
+                android:textSize="20dp"/>
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>
