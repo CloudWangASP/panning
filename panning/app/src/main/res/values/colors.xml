@@ -8,4 +8,5 @@
     <color name="colorDarkCyan">#008B8B</color>
     <color name="colorLightSeaGreen">#20B2AA</color>
     <color name="colorLightGrey">#F5F5F5</color>
+    <color name="titlebar_item_color_pressed">#20000000</color>
 </resources>
