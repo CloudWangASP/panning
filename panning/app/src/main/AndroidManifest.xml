@@ -26,6 +26,18 @@
         <activity
             android:name=".activity.VideoActivity"
             android:launchMode="singleTop" />
+
+        <activity
+            android:name=".activity.UserInfoAvtivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".activity.PanningInfoActivity"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>
