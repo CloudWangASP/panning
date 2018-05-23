@@ -8,7 +8,7 @@
     <com.panning.panning.view.PanningTopBar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorDarkCyan"
+        android:background="@color/black_title_main_theme"
         app:leftBackGround="@color/colorGold"
         app:titleText="设置"
         app:titleTextColor="@color/colorWhite"

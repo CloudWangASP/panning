@@ -55,7 +55,6 @@ public class PanningItemView extends RelativeLayout {
         int titleTextColor = typedArray.getColor(R.styleable.PanningItemView_itemTextColor, 0);
         int subTitleTextColor = typedArray.getColor(R.styleable.PanningItemView_subItemTextColor, 0);
         int titleImgBackground = typedArray.getResourceId(R.styleable.PanningItemView_rightBackground, 0);
-        int subTitleVisiable = typedArray.getInteger(R.styleable.PanningItemView_subItemVisiable, 0);
         typedArray.recycle();
 
         titleImg.setBackgroundResource(titleImgBackground);
@@ -66,7 +65,6 @@ public class PanningItemView extends RelativeLayout {
         subTitleView.setText(subTitleText);
         subTitleView.setTextColor(subTitleTextColor);
         subTitleView.setTextSize(subTitleTextSize);
-        subTitleView.setVisibility(subTitleVisiable);
     }
 
     public void setSubTitleViewVisiable(boolean flag) {

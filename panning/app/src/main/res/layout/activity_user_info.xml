@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorIvory"
+    android:background="@color/gray_bg_main_theme"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorDarkCyan">
+        android:background="@color/black_title_main_theme">
 
         <com.panning.panning.view.PanningTopBar xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/topBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorDarkCyan"
+            android:background="@color/black_title_main_theme"
             app:leftBackGround="@color/colorGold"
             app:rightBackGround="@color/colorGold"
             app:titleText="我的"
@@ -60,12 +60,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="10sp"
         android:background="@color/colorWhite"
-        app:itemText="XXX"
-        app:itemTextColor="@color/colorBlack"
+        app:itemText="可提现"
+        app:itemTextColor="@color/black_item_text"
         app:itemTextSize="10dp"
         app:rightBackground="@color/colorGold"
-        app:subItemText="sss"
-        app:subItemTextColor="@color/colorBlack"
+        app:subItemText="60.00"
+        app:subItemTextColor="@color/gray_text"
         app:subItemTextSize="8sp" />
 
     <com.panning.panning.view.PanningItemView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -73,12 +73,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:background="@color/colorWhite"
-        app:itemText="XXX"
-        app:itemTextColor="@color/colorBlack"
+        app:itemText="已提现"
+        app:itemTextColor="@color/black_item_text"
         app:itemTextSize="10sp"
         app:rightBackground="@color/colorGold"
-        app:subItemText="sss"
-        app:subItemTextColor="@color/colorBlack"
+        app:subItemText="500.00"
+        app:subItemTextColor="@color/gray_text"
         app:subItemTextSize="8sp" />
 
     <com.panning.panning.view.PanningItemView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -86,12 +86,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:background="@color/colorWhite"
-        app:itemText="XXX"
-        app:itemTextColor="@color/colorBlack"
+        app:itemText="总收益"
+        app:itemTextColor="@color/black_item_text"
         app:itemTextSize="10sp"
         app:rightBackground="@color/colorGold"
-        app:subItemText="sss"
-        app:subItemTextColor="@color/colorBlack"
+        app:subItemText="500.90"
+        app:subItemTextColor="@color/gray_text"
         app:subItemTextSize="8sp" />
 
     <com.panning.panning.view.PanningItemView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -99,11 +99,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorWhite"
-        app:itemText="XXX"
-        app:itemTextColor="@color/colorBlack"
+        app:itemText="分享给好友得金币"
+        app:itemTextColor="@color/black_item_text"
         app:itemTextSize="10sp"
-        app:rightBackground="@color/colorGold"
-        app:subItemText="sss"
-        app:subItemTextColor="@color/colorBlack"
-        app:subItemTextSize="8sp" />
+        app:rightBackground="@color/colorGold" />
 </LinearLayout>

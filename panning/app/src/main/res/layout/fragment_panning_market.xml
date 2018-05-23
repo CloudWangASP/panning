@@ -9,7 +9,7 @@
         android:id="@+id/marketTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorLightSeaGreen" />
+        android:background="@color/black_title_main_theme" />
 
     <com.panning.panning.view.MainViewPager
         android:id="@+id/marketViewPager"

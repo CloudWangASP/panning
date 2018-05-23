@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatDialogFragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.panning.panning.R;
@@ -31,48 +33,58 @@ public class PanningBaseFragment extends AppCompatDialogFragment implements View
     private TextView notice;
     private TextView todayProfit;
     private TextView panning;
-    private ImageView gold1;
-    private ImageView gold2;
-    private ImageView gold3;
     private CircleImageView mUserHead;
     private LinearLayout income;
+    private RelativeLayout goldMine;
+    private DisplayMetrics dm;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_panning_base, container, false);
         notice = view.findViewById(R.id.notice);
-        gold1 = view.findViewById(R.id.gold1);
-        gold2 = view.findViewById(R.id.gold2);
-        gold3 = view.findViewById(R.id.gold3);
+        goldMine = view.findViewById(R.id.gold_mine);
         panning = view.findViewById(R.id.panning);
         mUserHead = view.findViewById(R.id.user_head);
         income = view.findViewById(R.id.income);
         todayProfit = view.findViewById(R.id.todayProfit);
         notice.setText("上淘金，淘到你人生第一桶金～       上淘金，淘到你人生第一桶金～");
         notice.setSelected(true);
-        gold1.setOnClickListener(this);
-        gold2.setOnClickListener(this);
-        gold3.setOnClickListener(this);
         panning.setOnClickListener(this);
         mUserHead.setOnClickListener(this);
+        dm = getActivity().getResources().getDisplayMetrics();
+        setupGold();
         return view;
+    }
+
+    private void setupGold() {
+        for (int i = 0; i < 5; i++) {
+            final ImageView imageView = new ImageView(getActivity());
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(150, 150);
+            //布局高度
+            int height = goldMine.getLayoutParams().height;
+            //屏幕宽度
+            int width = dm.widthPixels;
+
+            int left = (int) (Math.random() * width);
+            int top = (int) (Math.random() * height);
+
+            lp.setMargins(left, top, left, top);
+            imageView.setLayoutParams(lp);
+            imageView.setImageResource(R.mipmap.panning);
+            goldMine.addView(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    setAnimation(view);
+                    imageView.setVisibility(View.GONE);
+                }
+            });
+        }
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.gold1:
-                gold1.setVisibility(View.GONE);
-                setAnimation(view);
-                break;
-            case R.id.gold2:
-                gold2.setVisibility(View.GONE);
-                setAnimation(view);
-                break;
-            case R.id.gold3:
-                gold3.setVisibility(View.GONE);
-                setAnimation(view);
-                break;
             case R.id.panning:
                 startActivity(new Intent(getActivity(), PanningInfoActivity.class));
                 break;

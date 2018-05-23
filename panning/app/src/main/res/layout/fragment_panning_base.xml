@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorLightSeaGreen"
+        android:background="@color/black_title_main_theme"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -31,6 +31,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/gold_mine"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:background="@mipmap/base_holder">
@@ -54,29 +55,6 @@
             android:padding="5dp"
             android:text="淘金攻略"
             android:textColor="@color/colorWhite" />
-
-        <ImageView
-            android:id="@+id/gold1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="80dp"
-            android:src="@mipmap/panning" />
-
-        <ImageView
-            android:id="@+id/gold2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@mipmap/panning" />
-
-        <ImageView
-            android:id="@+id/gold3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="60dp"
-            android:layout_marginTop="100dp"
-            android:src="@mipmap/panning" />
     </RelativeLayout>
 
     <LinearLayout

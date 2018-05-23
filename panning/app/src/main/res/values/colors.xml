@@ -5,8 +5,15 @@
     <color name="colorGold">#FFD700</color>
     <color name="colorLemon">#FFFACD</color>
     <color name="colorIvory">#FFFFF0</color>
-    <color name="colorDarkCyan">#008B8B</color>
-    <color name="colorLightSeaGreen">#20B2AA</color>
     <color name="colorLightGrey">#F5F5F5</color>
     <color name="titlebar_item_color_pressed">#20000000</color>
+
+    <color name="gray_bg_main_theme">#DFDFDF</color>
+    <color name="black_title_main_theme">#333335</color>
+    <color name="yellow_btn">#FFC22B</color>
+    <color name="blue_text">#2387D3</color>
+    <color name="black_text">#353535</color>
+    <color name="gray_text">#9A9A9A</color>
+    <color name="black_item_text">#4B4B4B</color>
+
 </resources>

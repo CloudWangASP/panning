@@ -15,7 +15,6 @@
         <attr name="subItemText" format="string" />
         <attr name="subItemTextSize" format="dimension" />
         <attr name="subItemTextColor" format="color" />
-        <attr name="subItemVisiable" format="integer" />
         <attr name="rightBackground" format="reference" />
     </declare-styleable>
 </resources>
