@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PanningTopBar">
+        <attr name="leftBackGround" format="reference" />
+        <attr name="rightBackGround" format="reference" />
+        <attr name="titleText" format="string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PanningItemView">
+        <attr name="itemText" format="string" />
+        <attr name="itemTextSize" format="dimension" />
+        <attr name="itemTextColor" format="color" />
+        <attr name="subItemText" format="string" />
+        <attr name="subItemTextSize" format="dimension" />
+        <attr name="subItemTextColor" format="color" />
+        <attr name="subItemVisiable" format="integer" />
+        <attr name="rightBackground" format="reference" />
+    </declare-styleable>
+</resources>
