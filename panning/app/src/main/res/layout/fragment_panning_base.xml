@@ -2,33 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/gray_bg_main_theme"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black_title_main_theme"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="公告："
-            android:textColor="@color/colorWhite"
-            android:textSize="12dp" />
-
-        <TextView
-            android:id="@+id/notice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:singleLine="true"
-            android:textColor="@color/colorWhite"
-            android:textSize="12dp" />
-    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/gold_mine"
@@ -51,16 +26,50 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
-            android:background="@color/colorGold"
-            android:padding="5dp"
+            android:background="@drawable/half_circle"
+            android:padding="10dp"
             android:text="淘金攻略"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/black_item_text" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新动态"
+            android:textColor="#FF612B"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/notice" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorIvory"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -74,31 +83,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="今日收益"
-                android:textColor="@color/colorBlack"
-                android:textSize="18dp" />
+                android:text="今日收益(元)"
+                android:textColor="#888888"
+                android:textSize="14dp" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/todayProfit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="￥"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/todayProfit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="100"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp" />
-            </LinearLayout>
+                android:text="+100"
+                android:textColor="#FF612B"
+                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -111,40 +106,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="总收益"
-                android:textColor="@color/colorBlack"
-                android:textSize="18dp" />
+                android:text="总收益(元)"
+                android:textColor="#888888"
+                android:textSize="14dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="￥100"
+                android:text="100"
                 android:textColor="@color/colorBlack"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="已提现"
-                android:textColor="@color/colorBlack"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="￥100"
-                android:textColor="@color/colorBlack"
-                android:textSize="20dp" />
+                android:textSize="30dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mainTabLayout.addTab(mainTabLayout.newTab());
 
         mainTabLayout.setupWithViewPager(mainViewPager);
-        mainTabLayout.getTabAt(0).setText("淘金基地");
+        mainTabLayout.getTabAt(0).setText("首页");
         mainTabLayout.getTabAt(1).setText("去淘金");
         mainTabLayout.setSelectedTabIndicatorColor(Color.TRANSPARENT);
     }
